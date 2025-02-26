@@ -138,17 +138,9 @@ a {
     display: flex;
     align-items: center;
 }
-
-summary {
-    list-style: none;
-}
-
-summary::-webkit-details-marker {
-    display: none;
-}
   
 .content__summary::before {
-    content: "";
+    content: " ";
     display: inline-block;
     background: url(/pictures/icons/expand.png);
     background-position: center;
@@ -157,10 +149,6 @@ summary::-webkit-details-marker {
     height: 26px;
     width: 26px;
     margin-right: 6px;
-}
-  
-.content__details[open] .content__summary::before {
-    transform: rotate(180deg);
 }
 
 .content__summary:hover {
