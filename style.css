@@ -29,7 +29,10 @@ body {
     margin-right: 16px;
     border-style: none;
     background-color: #ffffff;
-    
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 .header__burger-img {
