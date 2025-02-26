@@ -138,6 +138,14 @@ a {
     display: flex;
     align-items: center;
 }
+
+summary {
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
   
 .content__summary::before {
     content: "";
@@ -153,6 +161,10 @@ a {
   
 .content__details[open] .content__summary::before {
     transform: rotate(180deg);
+}
+
+.content__summary:hover {
+    cursor: pointer;
 }
 
 .picture {
@@ -297,5 +309,9 @@ a {
         height: 307px;
         width: 532px;
         margin: 7px 28px 49px 36px;
+    }
+
+    .content__summary {
+        margin-left: 32px;
     }
 }
