@@ -133,16 +133,22 @@ a {
 .content__summary {
     font-weight: 500;
     color: #1B1C21;
-    list-style: none;
     margin: 0 16px 16px 16px;
     display: flex;
     align-items: center;
 }
+ 
+.content__summary {
+    list-style: none;
+}
+  
+.content__summary::-webkit-details-marker {
+    display: none;
+}
   
 .content__summary::before {
     content: " ";
-    display: inline-block;
-    position: absolute;
+    display: flex;
     background: url(/pictures/icons/expand.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -150,6 +156,10 @@ a {
     height: 26px;
     width: 26px;
     margin-right: 6px;
+}
+  
+.content__details[open] .content__summary::before {
+    transform: rotate(180deg);
 }
 
 .content__summary:hover {
