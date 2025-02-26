@@ -131,35 +131,14 @@ a {
 }
 
 .content__summary {
-    font-weight: 500;
-    color: #1B1C21;
-    margin: 0 16px 16px 16px;
-    display: flex;
-    align-items: center;
-}
- 
-.content__summary {
     list-style: none;
+    background: url("/pictures/icons/expand.png") no-repeat scroll 0 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
-  
-.content__summary::-webkit-details-marker {
-    display: none;
-}
-  
-.content__summary::before {
-    content: " ";
-    display: flex;
-    background: url(/pictures/icons/expand.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 26px;
-    width: 26px;
-    margin-right: 6px;
-}
-  
-.content__details[open] .content__summary::before {
-    transform: rotate(180deg);
+
+.arrow {
+    margin-left: 35px;
 }
 
 .content__summary:hover {
