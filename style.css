@@ -353,13 +353,14 @@ a {
     .main-title__text,
     .main__navigation-list {
         margin-left: 34px;
-        margin-bottom: 0;
+        margin-bottom: 8;
     }
 
     .main-actions,
     .content__text--desktop {
         display: flex;
     }
+    
     .main-actions__img {
         margin-left: 8px;
     }
