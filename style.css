@@ -11,6 +11,22 @@ body {
     margin: 0;
 }
 
+button {
+    border-style: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: unset;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -29,55 +45,53 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 88px;
+    height: 1px;
+    width: 100%;
+    background: #D9FFF5;
 }
 
 .button {
     padding: 0;
-    margin-right: 16px;
-    border-style: none;
     background-color: #ffffff;
-}
-
-.button:hover {
-    cursor: pointer;
+    height: 40px;
+    width: 40px;
 }
 
 .header__burger-btn {
     background-image: url(pictures/icons/burger.svg);
-    height: 40px;
-    width: 40px;
+    margin-right: 16px;
     margin-left: 16px;
 }
 
 .header__call-btn {
     background-image: url(pictures/icons/call.svg);
-    height: 40px;
-    width: 40px;
+    margin-right: 16px;
 }
 
 .header__chat-btn {
     background-image: url(pictures/icons/chat.svg);
-    height: 40px;
-    width: 40px;
+    margin-right: 16px;
 }
 
 .header__profile-btn {
     background-image: url(pictures/icons/profile.svg);
-    height: 40px;
-    width: 40px;
+    margin-right: 16px;
 }
 
 .header__repair {
     background-image: url(pictures/icons/repair.svg);
-    height: 40px;
-    width: 40px;
+    margin-right: 16px;
 }
 
 .header__checkstatus {
     background-image: url(pictures/icons/checkstatus.svg);
-    height: 40px;
-    width: 40px;
+    margin-right: 16px;
 }
 
 .main-actions__repair::after {
@@ -87,15 +101,20 @@ body {
     width: 40px;
     margin: 0 0 0 8px;
 }
+
 .main-actions__checkstatus::after {
     content: "";
     background-image: url(pictures/icons/checkstatus.svg);
     height: 40px;
     width: 40px;
     margin: 0 0 0 8px;    
-    
 }
 
+.button:hover,
+.main-actions__repair,
+.main-actions__checkstatus {
+    cursor: pointer;
+}
 
 .divider {
     width: 2px;
@@ -103,19 +122,9 @@ body {
     background-color: #EAEAEA;
 }
 
-.header-shadow {
-    height: 1px;
-    background: #D9FFF5;
-}
-
 .column {
     display: flex;
     align-items: center;
-}
-
-.main {
-    background-color: #F8F8F8;
-    
 }
 
 .main-title {
@@ -138,7 +147,6 @@ body {
     left: 0px;
     border-radius: 0 4px 4px 0;
     background-color: #41F6D7;
-    
 }
 
 .main-actions__repair,
@@ -146,18 +154,6 @@ body {
     font-family: "TT Lakes", "Arial" ,sans-serif;
     font-weight: 500;
     font-size: 15px;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    outline: none;
-    text-decoration: none;
-    color: unset;
 }
 
 .main__navigation-list {
@@ -179,6 +175,7 @@ a {
     font-size: 16px;
     padding: 8px 16px;
 }
+
 .main__navigation-link {
     border: 2px solid #F8F8F8;
     color: #7E7E82;
@@ -230,7 +227,7 @@ a {
     cursor: pointer;
 }
 
-.content_picture {
+.content__picture {
     min-width: 320px;
     width: 100%;
     height: auto;
@@ -298,7 +295,7 @@ a {
     display: flex;
     }
 
-.content_picture {
+.content__picture {
     width: 360px;
     height: 208px;
     margin: 0 25px 40px 48px;
@@ -327,9 +324,13 @@ a {
     .main-header,
     .main-title {
         display: flex;
-        height: 90px;
         justify-content: space-between;
+        height: 90px;
         align-items: end;
+    }
+    
+    .main-actions__repair,
+    .main-actions__checkstatus {
         margin-bottom: 8px;
     }
 
@@ -363,7 +364,7 @@ a {
         margin-left: 8px;
     }
 
-    .content_picture {
+    .content__picture {
         height: 307px;
         width: 532px;
         margin: 7px 28px 49px 36px;
