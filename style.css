@@ -43,8 +43,57 @@ body {
     cursor: pointer;
 }
 
-.header__burger-img {
+.header__burger-btn {
+    background-image: url(pictures/icons/burger.svg);
+    height: 40px;
+    width: 40px;
     margin-left: 16px;
+}
+
+.header__call-btn {
+    background-image: url(pictures/icons/call.svg);
+    height: 40px;
+    width: 40px;
+}
+
+.header__chat-btn {
+    background-image: url(pictures/icons/chat.svg);
+    height: 40px;
+    width: 40px;
+}
+
+.header__profile-btn {
+    background-image: url(pictures/icons/profile.svg);
+    height: 40px;
+    width: 40px;
+}
+
+.header__repair {
+    background-image: url(pictures/icons/repair.svg);
+    height: 40px;
+    width: 40px;
+}
+
+.header__checkstatus {
+    background-image: url(pictures/icons/checkstatus.svg);
+    height: 40px;
+    width: 40px;
+}
+
+.main-actions__repair::after {
+    content: "";
+    background-image: url(pictures/icons/repair.svg);
+    height: 40px;
+    width: 40px;
+    margin: 0 0 0 8px;
+}
+.main-actions__checkstatus::after {
+    content: "";
+    background-image: url(pictures/icons/checkstatus.svg);
+    height: 40px;
+    width: 40px;
+    margin: 0 0 0 8px;    
+    
 }
 
 
@@ -75,14 +124,21 @@ body {
     align-items: center;
 }
 
-.main-title__hilight {
-    display: flex;
-}
-
 .main-title__text {
-    margin-left: 12px;
+    margin-left: 16px;
     font-weight: 500;
     font-size: 27px;
+}
+
+.main-title__text::before {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 4px;
+    left: 0px;
+    border-radius: 0 4px 4px 0;
+    background-color: #41F6D7;
+    
 }
 
 .main-actions__repair,
@@ -231,7 +287,7 @@ a {
 
 .main-title__text,
 .main__navigation-list {
-    margin-left: 20px;
+    margin-left: 24px;
     }
 
 .content__text {
@@ -277,14 +333,12 @@ a {
         margin-bottom: 8px;
     }
 
-    .main-title__text {
-        margin: 0 0 0 30px;
-    }
-
     .main-actions__checkstatus,
     .main-actions__repair {
         display: flex;
         background: #F8F8F8;
+        align-items: center;
+        margin-right: 32px;
     }
 
     .main__navigation-list {
@@ -297,13 +351,8 @@ a {
     }
     .main-title__text,
     .main__navigation-list {
-        margin-left: 30px;
+        margin-left: 34px;
         margin-bottom: 0;
-    }
-    .main-actions__repair,
-    .main-actions__checkstatus {
-        align-items: center;
-        margin-right: 32px;
     }
 
     .main-actions,
