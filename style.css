@@ -149,7 +149,7 @@ a {
 .content__summary::before {
     content: " ";
     display: flex;
-    background: url(/pictures/icons/expand.png);
+    background: url(pictures/icons/expand.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
