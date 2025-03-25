@@ -1,0 +1,282 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "TT Lakes", "Arial", sans-serif;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+button {
+    border-style: none;
+    padding: 0;
+    background-color: unset;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: TT Lakes;
+}
+
+ul,
+h2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: unset;
+    cursor: pointer;
+}
+
+.services-block {
+    min-width: 1120px;
+}
+
+.container {
+    padding: 0px 33px 0px 32px;
+}
+
+
+.service-header {
+    height: 56px;
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    border-top: solid 1px #D9FFF5;
+}
+
+.service-header__title {
+    font-family: TT Lakes;
+    font-weight: 300;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-top: 16px;
+}
+
+.service-header::before {
+    width: 119px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    left: 10px;
+}
+
+.service-main {
+    background-color: #F8F8F8;
+    width: 100%;
+}
+
+.card {
+    min-width: 240px;
+    max-width: 300px;
+    height: 72px;
+    margin: 0 auto;
+    border: solid 1px #EAEAEA;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    position: relative;
+    display: grid;
+    animation: showBlock 0.5s linear forwards;
+}
+
+@keyframes showBlock {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.brand-cards {
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr;
+    grid-gap: 16px 32px;
+    align-items: start;
+}
+
+.cards-wrapper {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.brand-cards__len {
+    background-image: url(pictures/brands/lenovo.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.brand-cards__sams {
+    background-image: url(pictures/brands/samsung.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.brand-cards__appl {
+    background-image: url(pictures/brands/apple.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.brand-cards__view {
+    background-image: url(pictures/brands/view.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.brand-cards__bsh {
+    background-image: url(pictures/brands/bosch.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.brand-cards__hp {
+    background-image: url(pictures/brands/hp.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.brand-cards__acer {
+    background-image: url(pictures/brands/acer.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.brand-cards__sony {
+    background-image: url(pictures/brands/sony.svg);
+    background-repeat: no-repeat;
+    background-position: 16px center;
+}
+
+.card::before {
+    content: "";
+    height: 40px;
+    width: 40px;
+    background-image: url(pictures/icons/arrow.svg);
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+}
+
+.button__close--open {
+    margin-bottom: 34px;
+    margin-left: 31px;
+    position: relative;
+}
+
+.button__close--open::before {
+    content: " ";
+    background-image: url(pictures/icons/expand.png);
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    left: -28px;
+    top: -3px;
+    rotate: 0deg;
+    transition: 0.5s;
+}
+
+.button__close--open--clicked::before {
+    rotate: 180deg;
+    transition: 0.5s;
+}
+
+.card-hide {
+    display: none;
+}
+
+@media (max-width: 1120px) {
+    .services-block {
+        min-width: 768px;
+    }
+
+    .brand-cards {
+        color: #FFFFFF;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 2fr;
+        grid-gap: 16px 32px;
+        align-items: start;
+    }
+
+    .card {
+        min-width: 224px;
+        max-width: 280px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .services-block {
+        width: 100%;
+        min-width: 320px;
+    }
+
+    .brand-cards {
+        color: #FFFFFF;
+        display: flex;
+        grid-gap: 16px 32px;
+        align-items: start;
+        overflow-y: scroll;
+
+    }
+
+    .brand-cards::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .container {
+        overflow: hidden;
+        padding: 0 0 0 16px;
+    }
+
+    .card {
+        width: 240px;
+    }
+
+    .button__close--open {
+        display: none;
+    }
+
+    .radio-block {
+        display: block;
+        margin: 0 auto 16px;
+        min-width: 204px;
+        text-align: center;
+        height: 12px;
+    }
+
+    .radio-block__selector {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #DDDDDD;
+        margin-right: 12px;
+    }
+
+    .radio-block::before {
+        content: '';
+        position: absolute;
+        top: 75px;
+        right: 0px;
+        width: 24px;
+        height: 81px;
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+    }
+}
+
