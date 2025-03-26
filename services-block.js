@@ -17,3 +17,37 @@ button.addEventListener('click', function () {
     }
 });
 
+let buttonPad = document.querySelector('.pad-btn');
+let pad = document.querySelector('.pad-cards');
+let cardsPad = pad.querySelectorAll('.card');
+
+buttonPad.addEventListener('click', function () {
+    if (this.innerHTML === "Показать все") {
+        this.innerHTML = "Скрыть";
+        buttonPad.classList.add('button__close--open--clicked');
+        for (let i = 6; i < cardsPad.length; i++) {
+            cardsPad[i].classList.remove('card-hide');
+        }
+    } else {
+        this.innerHTML = "Показать все";
+        buttonPad.classList.remove('button__close--open--clicked');
+        for (let i = 6; i < cardsPad.length; i++) {
+            cardsPad[i].classList.add('card-hide');
+        }
+    }
+});
+
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    freeMode: true,
+    loop: true,
+
+    slidesPerView: 3,
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    }
+});

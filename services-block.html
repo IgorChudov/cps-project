@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="services-block.css">
     <link rel="stylesheet" href="fonts/ttlakes.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>services block</title>
 </head>
+
 <body>
-    
+
     <div class="services-block">
         <header class="service-header">
             <div class="container">
@@ -16,11 +19,10 @@
             </div>
         </header>
 
-        <div class="service-main">
+        <div class="service-main desk">
             <div class="container">
                 <div class="cards-wrapper">
                     <ul class="brand-cards">
-                    
                         <li><a class="brand-cards__len card" href="#"></a></li>
                         <li><a class="brand-cards__sams card" href="#"></a></li>
                         <li><a class="brand-cards__appl card" href="#"></a></li>
@@ -32,31 +34,55 @@
                         <li><a class="brand-cards__len card card-hide" href="#"></a></li>
                         <li><a class="brand-cards__sams card card-hide" href="#"></a></li>
                         <li><a class="brand-cards__appl card card-hide" href="#"></a></li>
-                    
                     </ul>
-                    
-                    <div class="radio-block">
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                        <span class="radio-block__selector"></span>
-                    </div>
                 </div>
-
                 <button class="button button__close--open">Показать все</button>
-
             </div>
         </div>
+
+        <div class="service-main pad">
+            <div class="container">
+                <div class="cards-wrapper">
+                    <ul class="brand-cards pad-cards">
+                        <li><a class="brand-cards__len card" href="#"></a></li>
+                        <li><a class="brand-cards__sams card" href="#"></a></li>
+                        <li><a class="brand-cards__appl card" href="#"></a></li>
+                        <li><a class="brand-cards__view card" href="#"></a></li>
+                        <li><a class="brand-cards__bsh card" href="#"></a></li>
+                        <li><a class="brand-cards__hp card" href="#"></a></li>
+                        <li><a class="brand-cards__acer card card-hide" href="#"></a></li>
+                        <li><a class="brand-cards__sony card card-hide" href="#"></a></li>
+                        <li><a class="brand-cards__len card card-hide" href="#"></a></li>
+                        <li><a class="brand-cards__sams card card-hide" href="#"></a></li>
+                        <li><a class="brand-cards__appl card card-hide" href="#"></a></li>
+                    </ul>
+                </div>
+                <button class="button button__close--open pad-btn">Показать все</button>
+            </div>
+        </div>
+
+        <div class="swiper service-main mob">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><li><a class="brand-cards__len card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__sams card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__appl card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__view card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__bsh card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__hp card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__acer card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__sony card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__len card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__sams card" href="#"></a></li></div>
+              <div class="swiper-slide"><li><a class="brand-cards__appl card" href="#"></a></li></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="services-block.js"></script>
 </body>
+
 </html>
